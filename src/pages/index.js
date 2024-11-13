@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-
+<p>new p</p>
 const links = [
   {
     text: "AutoCad",
@@ -47,24 +47,15 @@ const samplePageLinks = [
 ]
 
 const moreLinks = [
-  { text: "Join us on Discord", url: "https://gatsby.dev/discord" },
-  {
-    text: "Documentation",
-    url: "https://gatsbyjs.com/docs/",
+  { 
+    text: "Contact DCC", url: "https://gatsby.dev/discord" 
   },
-  {
-    text: "Starters",
-    url: "https://gatsbyjs.com/starters/",
+  { 
+    text: "Github", url: "https://github.com/schizist" 
   },
-  {
-    text: "Showcase",
-    url: "https://gatsbyjs.com/showcase/",
+  { 
+    text: "Links from 'index.js'", url: "https://github.com/gatsbyjs/gatsby/issues" 
   },
-  {
-    text: "Contributing",
-    url: "https://www.gatsbyjs.com/contributing/",
-  },
-  { text: "Issues", url: "https://github.com/gatsbyjs/gatsby/issues" },
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
@@ -96,6 +87,12 @@ const IndexPage = () => (
         {/* Edit <code>src/pages/index.js</code> to update this page. */}
       </p>
     </div>
+
+    <h1>To do</h1>
+    <p>Favicon, Change header text, link indeed, linkedin, change footer, make splash screen, add 3D viewport, change logos.
+
+    </p>
+
     <ul className={styles.list}>
       {links.map(link => (
         <li key={link.url} className={styles.listItem}>
