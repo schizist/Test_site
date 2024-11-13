@@ -11,6 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
+import backgroundImage from "../images/bg1.png"
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -24,6 +26,37 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    {/* Here is where we do the background image* */}
+    <div
+      style={{
+        position: "relative",
+        minHeight: "100vh", // Full viewport height
+        backgroundColor: "black", // Solid black background
+        backgroundImage: `url(${backgroundImage})`, // Background image
+        backgroundSize: "cover",
+        backgroundPosition: "center top",
+        backgroundRepeat: "no-repeat",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+      }}
+    >
+      
+      {/* Overlay to control image opacity */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.0)", // Black with 50% opacity
+          zIndex: 1,
+        }}
+      />
+
+
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -43,6 +76,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
+      </div>
       </div>
     </>
   )
