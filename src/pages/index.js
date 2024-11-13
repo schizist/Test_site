@@ -35,15 +35,15 @@ const links = [
 
 const samplePageLinks = [
   {
-    text: "Page 2",
+    text: "COME ON IN",
     url: "page-2",
     badge: false,
     description:
-      "A simple example of linking to another page within a Gatsby site",
+      "There's some stuff in here.",
   },
-  { text: "TypeScript", url: "using-typescript" },
-  { text: "Server Side Rendering", url: "using-ssr" },
-  { text: "Deferred Static Generation", url: "using-dsg" },
+  // { text: "TypeScript", url: "using-typescript" },
+  // { text: "Server Side Rendering", url: "using-ssr" },
+  // { text: "Deferred Static Generation", url: "using-dsg" },
 ]
 
 const moreLinks = [
@@ -82,10 +82,10 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       <h1>
-        Welcome to <b>Gatsby!</b>
+        DC<b>C</b>
       </h1>
       <p className={styles.intro}>
-        <b>Example pages:</b>{" "}
+        {/* <b>Example pages:</b>{" "} */}
         {samplePageLinks.map((link, i) => (
           <React.Fragment key={link.url}>
             <Link to={link.url}>{link.text}</Link>
@@ -93,7 +93,7 @@ const IndexPage = () => (
           </React.Fragment>
         ))}
         <br />
-        Edit <code>src/pages/index.js</code> to update this page.
+        {/* Edit <code>src/pages/index.js</code> to update this page. */}
       </p>
     </div>
     <ul className={styles.list}>
