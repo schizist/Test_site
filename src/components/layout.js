@@ -36,6 +36,7 @@ const Layout = ({ children }) => {
         position: "relative",
         minHeight: "100vh", // Full viewport height
         backgroundColor: "black", // Solid black background
+        // backgroundColor: "red", // Fallback to check if styles apply
         backgroundImage: `url(${backgroundImage})`, // Background image
         backgroundSize: "cover",
         backgroundPosition: "center top",
