@@ -1,21 +1,11 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
 
-// import backgroundImage from "url(/bg1.png)" 
-// import backgroundImage: `url(/static/bg1.png)`,
-const backgroundImage = `/bg1.png`;
-
-
+// Background image path from static folder
+const backgroundImage = `/bg2.png`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -30,58 +20,60 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    {/* Here is where we do the background image* */}
-    <div
-      style={{
-        position: "relative",
-        minHeight: "100vh", // Full viewport height
-        backgroundColor: "black", // Solid black background
-        // backgroundColor: "red", // Fallback to check if styles apply
-        backgroundImage: `url(${backgroundImage})`, // Background image
-        backgroundSize: "cover",
-        backgroundPosition: "center top",
-        backgroundRepeat: "no-repeat",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "flex-start",
-      }}
-    >
-      
-      {/* Overlay to control image opacity */}
+      {/* Background container with image and overlay */}
       <div
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: "rgba(0, 0, 0, 0.0)", // Black with 50% opacity
-          zIndex: 1,
-        }}
-      />
-
-
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          position: "relative",
+          minHeight: "100vh",
+          backgroundColor: "black",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "flex-start",
         }}
       >
-        <main>{children}</main>
-        <footer
+        {/* Overlay that only affects the background */}
+        <div
           style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            marginLeft: 550,
+            marginRight: 550,
+            backgroundColor: "rgba(0, 0, 0, 0.6)", // Adjust opacity as needed
+            zIndex: 1, // Place the overlay below the content
           }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+        />
+
+        {/* Content container with higher z-index to sit above overlay */}
+        <div style={{ position: "relative", zIndex: 2 }}>
+          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+          <div
+            style={{
+              margin: `0 auto`,
+              maxWidth: `var(--size-content)`,
+              padding: `var(--size-gutter)`,
+            }}
+          >
+            <main>{children}</main>
+            <footer
+              style={{
+                marginTop: `var(--space-5)`,
+                fontSize: `var(--font-sm)`,
+              }}
+            >
+              © {new Date().getFullYear()} &middot; Built with
+              {` `}
+              <a href="https://www.gatsbyjs.com">Gatsby</a>
+            </footer>
+          </div>
+        </div>
       </div>
     </>
   )
