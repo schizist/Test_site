@@ -1,7 +1,10 @@
+/* this is the css file for the index component */
 .list {
   display: grid;
   margin: 0;
-  /* https://css-tricks.com/responsive-layouts-fewer-media-queries/ */
+  list-style-type: none; /* This removes bullets from the list */
+  padding-left: 0; /* Removes default padding on the list */
+  /* Responsive layout styles */
   --w: 280px;
   --n: 2;
   gap: var(--size-gap);
@@ -15,22 +18,6 @@
 
 .listItem {
   margin: 0;
-}
-
-.listItem::marker {
-  color: #e95800;
-}
-
-.listItem:nth-child(2)::marker {
-  color: #159bf3;
-}
-
-.listItem:nth-child(3)::marker {
-  color: #8eb814;
-}
-
-.listItem:nth-child(4)::marker {
-  color: #663399;
 }
 
 .listItemLink {
