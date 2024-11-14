@@ -41,11 +41,12 @@ const Layout = ({ children }) => {
           style={{
             position: "absolute",
             top: 0,
-            left: 0,
+            left: 50,
             right: 0,
             bottom: 0,
-            marginLeft: 550,
-            marginRight: 550,
+            margin: "0 auto",
+            // marginRight: 550,
+            width: 800,
             backgroundColor: "rgba(0, 0, 0, 0.6)", // Adjust opacity as needed
             zIndex: 1, // Place the overlay below the content
           }}
