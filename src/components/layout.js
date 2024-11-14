@@ -11,7 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const backgroundImage = "/bg1.png";
+// import backgroundImage from "url(/static/bg1.png)" 
+// import backgroundImage: `url(/static/bg1.png)`,
+const backgroundImage = `/static/bg1.png`
 
 
 const Layout = ({ children }) => {
