@@ -20,11 +20,19 @@ const ThreeDViewer = ({ modelPath }) => {
     // Set up the renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
+    renderer.physicallyCorrectLights = true;
+    renderer.outputEncoding = THREE.sRGBEncoding;
     currentMount.appendChild(renderer.domElement);
 
     // Load the model
     const loader = new GLTFLoader();
     loader.load(modelPath, (gltf) => {
+      gltf.scene.traverse((node) => {
+        if (node.isMesh) {
+          node.castShadow = true;
+          node.receiveShadow = true;
+        }
+      });
       scene.add(gltf.scene);
     }, undefined, (error) => {
       console.error('An error occurred while loading the model:', error);
@@ -36,6 +44,7 @@ const ThreeDViewer = ({ modelPath }) => {
 
     const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
     directionalLight.position.set(5, 10, 7.5);
+    directionalLight.castShadow = true;
     scene.add(directionalLight);
 
     // Add OrbitControls
