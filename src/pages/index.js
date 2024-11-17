@@ -40,9 +40,7 @@ const moreLinks = [
   { 
     text: "Github", url: "https://github.com/schizist" 
   },
-  // { 
-  //   text: "Links from 'index.js'", url: "https://github.com/gatsbyjs/gatsby/issues" 
-  // },
+ 
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HOME`
@@ -69,7 +67,7 @@ const IndexPage = () => (
      <p  className={styles.general}>
       TO DO: 
       <br/>
-      Favicon, Change header text, link indeed, linkedin, change footer, make splash screen, add 3D viewport, change logos.
+      link indeed, linkedin,  make splash screen, 
      </p>
     </div>
 

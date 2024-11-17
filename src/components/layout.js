@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const backgroundImage = `/bg2.png`
+// Import image dynamically
+import bgImage from "../../static/bg2.png" // Adjust path as needed
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,57 +26,57 @@ const Layout = ({ children }) => {
           position: "relative",
           minHeight: "100vh",
           backgroundColor: "black",
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
           display: "flex",
           flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "flex-start",
         }}
       >
         {/* Overlay that only affects the background */}
         <div
           style={{
             position: "absolute",
+            width: "90%",
+            maxWidth: "2900px",
             top: 0,
-            left: 50,
+            left: "50%",
+            transform: "translateX(-50%)", // Centers horizontally
+            height: "100%", // Ensures it spans the full height
             right: 0,
             bottom: 0,
-            margin: "0 auto",
-            width: 800,
-            backgroundColor: "rgba(0, 0, 0, 0.6)", // Adjust opacity as needed
-            zIndex: 1, // Place the overlay below the content
+            backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent overlay
+            zIndex: 1,
           }}
         />
 
 
 
-        {/* Content container with higher z-index to sit above overlay */}
-        <div style={{ position: "relative", zIndex: 2 }}>
-          <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-          <div
+        {/* Content container */}
+        <div
+          style={{
+            position: "relative",
+            zIndex: 2,
+            width: "100%",
+            maxWidth: "1200px", // Adjust to limit the max width
+            margin: "0 auto",
+            padding: "var(--size-gutter)",
+          }}
+        >
+          <Header siteTitle={data.site.siteMetadata?.title || "Title"} />
+
+          <main>{children}</main>
+
+          <footer
             style={{
-              margin: `0 auto`,
-              maxWidth: `var(--size-content)`,
-              padding: `var(--size-gutter)`,
+              textAlign: "center",
+              marginTop: "var(--space-5)",
+              fontSize: "var(--font-sm)",
             }}
           >
-
-            <main>{children}</main>
-            
-            <footer
-              style={{ position: "center", 
-                textAlign: "center",
-                marginTop: `var(--space-5)`,
-                fontSize: `var(--font-sm)`,
-              }}
-            >
-              © {new Date().getFullYear()} &middot;
-              {` `}
-            </footer>
-          </div>
+            © {new Date().getFullYear()} &middot; Your Site Name
+          </footer>
         </div>
       </div>
     </>
