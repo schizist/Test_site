@@ -1,11 +1,10 @@
 import * as React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-{/* <p>new p</p> */}
 const links = [
   {
     text: "3D",
@@ -41,9 +40,9 @@ const moreLinks = [
   { 
     text: "Github", url: "https://github.com/schizist" 
   },
-  { 
-    text: "Links from 'index.js'", url: "https://github.com/gatsbyjs/gatsby/issues" 
-  },
+  // { 
+  //   text: "Links from 'index.js'", url: "https://github.com/gatsbyjs/gatsby/issues" 
+  // },
 ]
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HOME`
@@ -61,14 +60,14 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       
-      <h1 style={{ fontSize: '5em' }}>
+      <h1  className={styles.monogram}>
         DC<b>C</b>
       </h1>
     </div>
 
     <div>
-     <p>
-      <b>TO DO: </b>
+     <p  className={styles.general}>
+      TO DO: 
       <br/>
       Favicon, Change header text, link indeed, linkedin, change footer, make splash screen, add 3D viewport, change logos.
      </p>

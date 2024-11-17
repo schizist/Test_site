@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+
 const ThreeDViewer = ({ modelPath }) => {
   const mountRef = useRef(null);
 
@@ -21,7 +22,7 @@ const ThreeDViewer = ({ modelPath }) => {
     const renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
     renderer.physicallyCorrectLights = true;
-    renderer.outputEncoding = THREE.sRGBEncoding;
+    // renderer.outputEncoding = THREE.sRGBEncoding;
     currentMount.appendChild(renderer.domElement);
 
     // Load the model

@@ -23,6 +23,7 @@
 .listItemLink {
   color: var(--color-primary);
   font-weight: bold;
+  font-size: 2em;
 }
 
 .listItemDescription {
@@ -47,4 +48,21 @@
   justify-content: center; /* Center the content inside */
   flex-wrap: wrap; /* Allow links to wrap if they overflow */
   gap: 10; /* Add some space between the links */
+}
+
+
+.general {
+  color: #624c44;
+  font-size: 20;
+  /* font-weight: bold;  */
+  margin-bottom: 0;
+  margin-top: var (--space-1);
+}
+
+.monogram {
+  color: #514462;
+  font-size: 5em;
+  /* font-weight: bold;  */
+  margin-bottom: 0;
+  margin-top: var (--space-1);
 }

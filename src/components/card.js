@@ -1,6 +1,6 @@
 import React from 'react';
 // import './Card.css'; // Assume you have some basic styling here
-import styles from "./card.module.css"
+// import styles from "./card.module.css"
 
 
 
