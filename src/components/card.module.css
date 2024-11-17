@@ -1,0 +1,12 @@
+/* src/components/card.module.css */
+.card {
+    background-color: #1f1f1f;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+  }
+  
+  .link {
+    color: #bb86fc;
+    text-decoration: none;
+  }
