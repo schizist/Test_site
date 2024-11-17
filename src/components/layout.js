@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-// Background image path from static folder
 const backgroundImage = `/bg2.png`
 
 const Layout = ({ children }) => {
@@ -45,12 +44,13 @@ const Layout = ({ children }) => {
             right: 0,
             bottom: 0,
             margin: "0 auto",
-            // marginRight: 550,
             width: 800,
             backgroundColor: "rgba(0, 0, 0, 0.6)", // Adjust opacity as needed
             zIndex: 1, // Place the overlay below the content
           }}
         />
+
+
 
         {/* Content container with higher z-index to sit above overlay */}
         <div style={{ position: "relative", zIndex: 2 }}>
@@ -62,16 +62,18 @@ const Layout = ({ children }) => {
               padding: `var(--size-gutter)`,
             }}
           >
+
             <main>{children}</main>
+            
             <footer
-              style={{
+              style={{ position: "center", 
+                textAlign: "center",
                 marginTop: `var(--space-5)`,
                 fontSize: `var(--font-sm)`,
               }}
             >
-              © {new Date().getFullYear()} &middot; Built with
+              © {new Date().getFullYear()} &middot;
               {` `}
-              <a href="https://www.gatsbyjs.com">Gatsby</a>
             </footer>
           </div>
         </div>

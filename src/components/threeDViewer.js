@@ -73,7 +73,7 @@ const ThreeDViewer = ({ modelPath }) => {
     };
   }, [modelPath]);
 
-  return <div ref={mountRef} style={{ width: '100%', height: '500px' }} />;
+  return <div ref={mountRef} style={{ width: '100%', height: '500px', margin: '0 auto' }} />;
 };
 
 export default ThreeDViewer;

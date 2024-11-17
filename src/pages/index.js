@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
-<p>new p</p>
+{/* <p>new p</p> */}
 const links = [
   {
     text: "3D",
@@ -15,9 +15,9 @@ const links = [
   },
   {
     text: "Fusion 360",
-    url: "https://github.com/gatsbyjs/gatsby/tree/master/examples",
+    url: "autocad",
     description:
-      "A collection of websites ranging from very basic to complex/complete that illustrate how to accomplish specific tasks within your Gatsby sites.",
+      "A collection of my AutoCAD wor",
   },
   {
     text: "Blender",
@@ -33,18 +33,6 @@ const links = [
   },
 ]
 
-const samplePageLinks = [
-  {
-    text: "COME ON IN",
-    url: "page-2",
-    badge: false,
-    description:
-      "There's some stuff in here.",
-  },
-  // { text: "TypeScript", url: "using-typescript" },
-  // { text: "Server Side Rendering", url: "using-ssr" },
-  // { text: "Deferred Static Generation", url: "using-dsg" },
-]
 
 const moreLinks = [
   { 
@@ -58,7 +46,7 @@ const moreLinks = [
   },
 ]
 
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
+const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HOME`
 
 const IndexPage = () => (
   <Layout>
@@ -72,26 +60,19 @@ const IndexPage = () => (
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
+      
       <h1 style={{ fontSize: '5em' }}>
         DC<b>C</b>
       </h1>
-      <p className={styles.intro}>
-        {/* <b>Example pages:</b>{" "} */}
-        {samplePageLinks.map((link, i) => (
-          <React.Fragment key={link.url}>
-            <Link to={link.url}>{link.text}</Link>
-            {i !== samplePageLinks.length - 1 && <> · </> }
-          </React.Fragment>
-        ))}
-        <br />
-        {/* Edit <code>src/pages/index.js</code> to update this page. */}
-      </p>
     </div>
 
-    <h1>To do</h1>
-    <p>Favicon, Change header text, link indeed, linkedin, change footer, make splash screen, add 3D viewport, change logos.
-
-    </p>
+    <div>
+     <p>
+      <b>TO DO: </b>
+      <br/>
+      Favicon, Change header text, link indeed, linkedin, change footer, make splash screen, add 3D viewport, change logos.
+     </p>
+    </div>
 
     <ul className={styles.list}>
       {links.map(link => (
@@ -106,12 +87,16 @@ const IndexPage = () => (
         </li>
       ))}
     </ul>
+    
+    <div className={styles.moreLinks}>
     {moreLinks.map((link, i) => (
       <React.Fragment key={link.url}>
         <a href={`${link.url}${utmParameters}`}>{link.text}</a>
         {i !== moreLinks.length - 1 && <> · </> }
       </React.Fragment>
     ))}
+    </div>
+
   </Layout>
 )
 

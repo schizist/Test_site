@@ -39,3 +39,12 @@
   max-width: none;
   line-height: var(--line-height-loose);
 }
+
+.moreLinks {
+  text-align: center; /* Center the text horizontally */
+  margin: 20 auto; /* Add margin for spacing */
+  display: flex;
+  justify-content: center; /* Center the content inside */
+  flex-wrap: wrap; /* Allow links to wrap if they overflow */
+  gap: 10; /* Add some space between the links */
+}
