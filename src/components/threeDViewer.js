@@ -3,7 +3,6 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
-
 const ThreeDViewer = ({ modelPath }) => {
   const mountRef = useRef(null);
 
@@ -35,6 +34,11 @@ const ThreeDViewer = ({ modelPath }) => {
         }
       });
       scene.add(gltf.scene);
+
+      // Set controls to pivot around the model
+      const box = new THREE.Box3().setFromObject(gltf.scene);
+      const center = box.getCenter(new THREE.Vector3());
+      controls.target.copy(center);
     }, undefined, (error) => {
       console.error('An error occurred while loading the model:', error);
     });
