@@ -7,8 +7,8 @@ import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 const links = [
   {
-    text: "3D",
-    url: "3d",
+    text: "threeD",
+    url: "threeD",
     description:
       "Some examples of my 3D work.",
   },
@@ -49,7 +49,7 @@ const IndexPage = () => (
   <Layout>
     <div className={styles.textCenter}>
       <StaticImage
-        src="../images/dumbLogo.png"
+
         loading="Loadign"
         width={64}
         quality={95}
@@ -58,9 +58,6 @@ const IndexPage = () => (
         style={{ marginBottom: `var(--space-3)` }}
       />
       
-      <h1  className={styles.monogram}>
-        DC<b>C</b>
-      </h1>
     </div>
 
     <div>

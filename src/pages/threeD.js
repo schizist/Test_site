@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Layout from '../components/layout.js';
 import ThreeDViewer from '../components/threeDViewer.js';
 import Card from '../components/card.js';
-import { Link } from "gatsby";
-import * as styles from "../components/index.module.css"
+// import { Link } from "gatsby";
+// import * as styles from "../components/index.module.css"
 
 const models = [
   {
@@ -31,12 +31,8 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <div className={styles.textCenter}>
-        <Link to="/">HOME</Link>
-
-      </div>
-      <div>
-        <h1>3D Model Viewer</h1>
+     <div>
+        <h1>3D VIEWER</h1>
         <ThreeDViewer modelPath={selectedModel} />
       </div>
 

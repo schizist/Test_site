@@ -1,18 +1,28 @@
 import React from 'react';
-// import './Card.css'; // Assume you have some basic styling here
-// import styles from "./card.module.css"
+import './card.module.css'; 
+
 
 
 
 const Card = ({ title, description, thumbnail, onClick }) => (
   <div className="card">
-    <img src={thumbnail} alt={`${title} thumbnail`} className="card-thumbnail" />
     <div className="card-content">
-      <h3>{title}</h3>
+      <h1 style={{ margin: 0, padding: 0 }}>{title}</h1>
+      <button
+        onClick={onClick}
+        style={{ margin: 0, padding: 0, borderRadius: 50 }}
+      >
+        <img
+          src={thumbnail}
+          alt={`${title} thumbnail`}
+          className="card-thumbnail"
+          style={{ borderRadius: 50 }}
+        />
+      </button>
       <p>{description}</p>
-      <button onClick={onClick}>View Model</button>
     </div>
   </div>
 );
+
 
 export default Card;

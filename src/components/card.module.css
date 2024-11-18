@@ -10,3 +10,28 @@
     color: #bb86fc;
     text-decoration: none;
   }
+
+  .card-content h1 {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Ensure no padding */
+  }
+  
+  .card-content button {
+    margin: 0; /* Remove margin */
+    display: block; /* Ensure button behaves predictably */
+    width: 100px; /* Set button width */
+    height: 50px; /* Set button height */
+    padding: 8px; /* Control internal spacing */
+    font-size: 16px; /* Control text size */
+    border: none; /* Optional: Remove default border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    background-color: #7026b9; /* Optional: Background color */
+    color: var(--color-text); /* Optional: Text color */
+    cursor: pointer; /* Optional: Add pointer cursor on hover */
+  }
+  
+  .card-content button img {
+    max-width: 100%; /* Ensure the image fits the button */
+    max-height: 100%; /* Ensure the image fits the button */
+  }
+  

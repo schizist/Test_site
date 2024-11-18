@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const SecondPage = () => (
+const AutoCAD = () => (
   <Layout>
     <h1>AutoCAD</h1>
     <Link to="/">HOME</Link>
@@ -13,4 +13,4 @@ const SecondPage = () => (
 
 export const Head = () => <Seo title="AutoCad" />
 
-export default SecondPage
+export default AutoCAD
