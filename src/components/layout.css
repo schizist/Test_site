@@ -8,6 +8,7 @@
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
+  --font-primary: 'Orbitron', sans-serif;
   --font-lg: 18px;
   --font-md: 16px;
   --font-sm: 14px;
@@ -222,3 +223,4 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');

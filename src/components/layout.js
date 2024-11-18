@@ -34,24 +34,6 @@ const Layout = ({ children }) => {
           flexDirection: "column",
         }}
       >
-        {/* Overlay that only affects the background */}
-        {/* <div
-          style={{
-            position: "absolute",
-            width: "90%",
-            maxWidth: "2900px",
-            top: 0,
-            left: "50%",
-            transform: "translateX(-50%)", // Centers horizontally
-            height: "100%", // Ensures it spans the full height
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent overlay
-            zIndex: 1,
-          }}
-        /> */}
-
-
 
         {/* Content container */}
         <div
@@ -59,6 +41,7 @@ const Layout = ({ children }) => {
             position: "relative",
             backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent white`
             top: "5%",
+            height: "90%", // Ensures it spans 90% of the viewport height
             zIndex: 2,
             width: "90%",
             maxWidth: "2900px", // Adjust to limit the max width
@@ -75,7 +58,7 @@ const Layout = ({ children }) => {
               textAlign: "center",
               marginTop: "var(--space-5)",
               fontSize: "var(--font-sm)",
-              color: "var(--color-text)",
+              // color: "var(--color-text)",
             }}
           >
             © {new Date().getFullYear()} &middot; DCC Illustration
