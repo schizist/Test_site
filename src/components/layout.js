@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
         }}
       >
         {/* Overlay that only affects the background */}
-        <div
+        {/* <div
           style={{
             position: "absolute",
             width: "90%",
@@ -49,7 +49,7 @@ const Layout = ({ children }) => {
             backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent overlay
             zIndex: 1,
           }}
-        />
+        /> */}
 
 
 
@@ -57,9 +57,11 @@ const Layout = ({ children }) => {
         <div
           style={{
             position: "relative",
+            backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent white`
+            top: "5%",
             zIndex: 2,
-            width: "100%",
-            maxWidth: "1200px", // Adjust to limit the max width
+            width: "90%",
+            maxWidth: "2900px", // Adjust to limit the max width
             margin: "0 auto",
             padding: "var(--size-gutter)",
           }}
@@ -73,9 +75,10 @@ const Layout = ({ children }) => {
               textAlign: "center",
               marginTop: "var(--space-5)",
               fontSize: "var(--font-sm)",
+              color: "var(--color-text)",
             }}
           >
-            © {new Date().getFullYear()} &middot; Your Site Name
+            © {new Date().getFullYear()} &middot; DCC Illustration
           </footer>
         </div>
       </div>

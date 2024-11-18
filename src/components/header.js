@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
+import bgImage from "../../static/bg2.png" // Adjust path as needed
 
 const Header = ({ siteTitle }) => (
   <header
@@ -18,7 +19,7 @@ const Header = ({ siteTitle }) => (
         textDecoration: `none`,
       }}
     >
-      {siteTitle}
+      <img src={require("../../src/images/dumbLogo.png").default} alt={siteTitle} style={{ height: `50px` }} />
     </Link>
   
   </header>
