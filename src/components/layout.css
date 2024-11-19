@@ -26,24 +26,21 @@
   --size-gutter: var(--space-6);
   --size-gap: var(--space-6);
 }
-html {
-  -webkit-text-size-adjust: 100%;
-  box-sizing: border-box;
-  font: sans-serif;
-  font-size: var(--font-md);
-  line-height: var(--line-height-normal);
-  overflow-y: scroll;
-}
-body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
-  font-family: sans-serif;
-  font-family: var(--font-sans);
-  font-weight: normal;
+html, body {
   margin: 0;
-  word-wrap: break-word;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
+
+body {
+  background-image: url('../../static/bg1.png'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 a {
   background-color: transparent;
   color: var(--color-primary);
