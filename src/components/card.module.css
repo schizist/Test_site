@@ -4,16 +4,19 @@
     padding: 1rem;
     margin: 1rem 0;
     border-radius: 8px;
+    font-family: var(--font-orbitron);
   }
   
   .link {
     color: #bb86fc;
     text-decoration: none;
+    font-family: var(--font-orbitron);
   }
 
   .card-content h1 {
     margin: 0; /* Remove default margin */
     padding: 0; /* Ensure no padding */
+    font-family: var(--font-orbitron);
   }
   
   .card-content button {
@@ -28,10 +31,12 @@
     background-color: #7026b9; /* Optional: Background color */
     color: var(--color-text); /* Optional: Text color */
     cursor: pointer; /* Optional: Add pointer cursor on hover */
+    font-family: var(--font-orbitron);
   }
   
   .card-content button img {
     max-width: 100%; /* Ensure the image fits the button */
-    max-height: 100%; /* Ensure the image fits the button */
+    max-height: 100%;
+    font-family: var(--font-orbitron);
   }
   

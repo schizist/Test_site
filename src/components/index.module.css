@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
 /* this is the css file for the index component */
 .list {
   display: grid;
@@ -5,6 +7,7 @@
   list-style-type: none; /* This removes bullets from the list */
   padding-left: 0; /* Removes default padding on the list */
   /* Responsive layout styles */
+  font-family: var(--font-orbitron);
   --w: 280px;
   --n: 2;
   gap: var(--size-gap);
@@ -18,6 +21,7 @@
 
 .listItem {
   margin: 0;
+  
 }
 
 .listItemLink {
@@ -34,6 +38,7 @@
 
 .textCenter {
   text-align: center;
+  font-family: var(--font-orbitron);
 }
 
 .intro {
@@ -57,14 +62,14 @@
   /* font-weight: bold;  */
   margin-bottom: 0;
   margin-top: var (--space-1);
+  font-family: var(--font-orbitron);
 }
 
 .monogram {
   color: var(--color-text);
   font-size: 5em;
   font-weight: bold; 
-  font-style: var(--font-primary);
-  margin-bottom: 0;
-  margin-top: var (--space-1 );
+  font-family: var(--font-orbitron);
+
   
 }
