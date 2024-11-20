@@ -21,8 +21,7 @@ const Layout = ({ children }) => {
   return (
     <>
       {/* Background container with image and overlay */}
-      <div
-        style={{
+      <div  style={{
           position: "relative",
           minHeight: "100vh",
           backgroundColor: "black",
@@ -39,18 +38,18 @@ const Layout = ({ children }) => {
         <div
           style={{
             position: "relative",
-            backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent white`
-            top: "5%",
+            // backgroundColor: "rgba(0, 0, 0, 0.4)", // Semi-transparent black`
+            // top: "5%", 
             height: "90%", // Ensures it spans 90% of the viewport height
             zIndex: 2,
-            width: "90%",
+            width: "100%",
             maxWidth: "2900px", // Adjust to limit the max width
             margin: "0 auto",
             padding: "var(--size-gutter)",
           }}
         >
           <Header siteTitle={data.site.siteMetadata?.title || "Title"} />
-
+          <div style={{ marginBottom: "var(--space-5)" }}></div>
           <main>{children}</main>
 
           <footer

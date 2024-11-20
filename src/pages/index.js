@@ -14,7 +14,7 @@ const links = [
   },
   {
     text: "Fusion 360",
-    url: "autocad",
+    url: "new",
     description:
       "A collection of my AutoCAD wor",
   },
@@ -47,50 +47,60 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HO
 
 const IndexPage = () => (
   <Layout>
-    <div className={styles.textCenter}>
-      <StaticImage
+    <div style={{ position: "relative",
+          minHeight: "100vh",
+          backgroundColor: "red",
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          flexDirection: "column",
+          padding: "var(--size-gutter)",
+          }}>
+      <div className={styles.textCenter}>
+        <StaticImage
 
-        loading="Loadign"
-        width={64}
-        quality={95}
-        formats={["auto", "webp", "avif"]}
-        alt=""
-        style={{ marginBottom: `var(--space-3)` }}
-      />
+          loading="Loadign"
+          width={64}
+          quality={95}
+          formats={["auto", "webp", "avif"]}
+          alt=""
+          style={{ marginBottom: `var(--space-3)` }}
+        />
+        
+      </div>
+
+      <div>
+      <p  className={styles.general}>
+        TO DO: 
+        <br/>
+        link indeed, linkedin,  make splash screen, 
+      </p>
+      </div>
+
+      <ul className={styles.list}>
+        {links.map(link => (
+          <li key={link.url} className={styles.listItem}>
+            <a
+              className={styles.listItemLink}
+              href={`${link.url}${utmParameters}`}
+            >
+              {link.text}
+            </a>
+            <p className={styles.listItemDescription}>{link.description}</p>
+          </li>
+        ))}
+      </ul>
       
-    </div>
-
-    <div>
-     <p  className={styles.general}>
-      TO DO: 
-      <br/>
-      link indeed, linkedin,  make splash screen, 
-     </p>
-    </div>
-
-    <ul className={styles.list}>
-      {links.map(link => (
-        <li key={link.url} className={styles.listItem}>
-          <a
-            className={styles.listItemLink}
-            href={`${link.url}${utmParameters}`}
-          >
-            {link.text}
-          </a>
-          <p className={styles.listItemDescription}>{link.description}</p>
-        </li>
+      <div className={styles.moreLinks}>
+      {moreLinks.map((link, i) => (
+        <React.Fragment key={link.url}>
+          <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+          {i !== moreLinks.length - 1 && <> · </> }
+        </React.Fragment>
       ))}
-    </ul>
-    
-    <div className={styles.moreLinks}>
-    {moreLinks.map((link, i) => (
-      <React.Fragment key={link.url}>
-        <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-        {i !== moreLinks.length - 1 && <> · </> }
-      </React.Fragment>
-    ))}
-    </div>
-
+      </div>
+   </div>
   </Layout>
 )
 

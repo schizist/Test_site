@@ -4,8 +4,8 @@
 .list {
   display: grid;
   margin: 0;
-  list-style-type: none; /* This removes bullets from the list */
-  padding-left: 0; /* Removes default padding on the list */
+  list-style-type: none;
+  padding-left: 0;
   /* Responsive layout styles */
   font-family: var(--font-orbitron);
   --w: 280px;
@@ -21,7 +21,6 @@
 
 .listItem {
   margin: 0;
-  
 }
 
 .listItemLink {

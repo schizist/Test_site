@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Layout from '../components/layout.js';
 import ThreeDViewer from '../components/threeDViewer.js';
 import Card from '../components/card.js';
-// import { Link } from "gatsby";
-// import * as styles from "../components/index.module.css"
 
 const models = [
   {

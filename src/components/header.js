@@ -5,7 +5,16 @@ import * as styles from "../components/index.module.css"
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      display: `flex`,
+      position: "relative",
+      maxHeight: "100vh",
+      backgroundColor: "yellow",
+
+      backgroundSize: "cover",
+      backgroundPosition: "center top",
+      backgroundRepeat: "no-repeat",
+      display: "flex",
+      flexDirection: "column",
+      // maxWidth: "2900px"
     }}
   >
     <Link
