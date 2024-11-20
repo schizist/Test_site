@@ -25,6 +25,7 @@
   --size-content: 54rem;
   --size-gutter: var(--space-6);
   --size-gap: var(--space-6);
+
 }
 html {
   -webkit-text-size-adjust: 100%;
