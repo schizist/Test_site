@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import * as styles from "../components/index.module.css"
 
 
-const headheight = "6em"
+const headheight = "2em"
 const Header = ({ siteTitle }) => (
   <header
   style={{
