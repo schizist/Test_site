@@ -49,7 +49,9 @@ const IndexPage = () => (
   <Layout>
     <div style={{ position: "relative",
           minHeight: "100vh",
-          backgroundColor: "red",
+          borderRadius: "1em 1em 1em 1em", // Rounded corners on the bottom
+          backgroundColor: "rgba(0, 0, 0, 0.6)", // Semi-transparent black
+          // backgroundColor: "red",
           backgroundSize: "cover",
           backgroundPosition: "center top",
           backgroundRepeat: "no-repeat",
