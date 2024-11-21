@@ -2,8 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby";
 import * as styles from "../components/index.module.css";
 
-const headheight = "3em";  // Consistent height value for the header
-
+const headheight = "6em"
 const Header = ({ siteTitle }) => (
   <header
     style={{
