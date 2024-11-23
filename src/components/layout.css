@@ -10,7 +10,7 @@
     "Courier New", monospace;
   --font-orbitron: 'Orbitron', sans-serif;
   --font-lg: 18px;
-  --font-md: 16px;
+  --font-md: 1.6rem;
   --font-sm: 14px;
   --font-sx: 12px;
   --line-height-loose: 1.75;
@@ -31,7 +31,7 @@ html {
   -webkit-text-size-adjust: 100%;
   box-sizing: border-box;
   font: sans-serif;
-  font-size: var(--font-md);
+  font-size: 62.5%;
   line-height: var(--line-height-normal);
   overflow-y: scroll;
 }
@@ -42,6 +42,7 @@ body {
   font-family: sans-serif;
   font-family: var(--font-orbitron);
   font-weight: normal;
+  font-size: 1.6rem;
   margin: 0;
   word-wrap: break-word;
 }
@@ -224,4 +225,15 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  padding: 0 1rem;
+  border-radius: 1rem;
+  position: relative;
+  height: 6rem;
+  background-color: black;
+  opacity: 50%;
 }

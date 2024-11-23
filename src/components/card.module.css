@@ -8,3 +8,8 @@
     background-size: auto;
     border: none; 
   }
+
+  span {
+    font-family: var(--font-orbitron);
+    font-size: 5.5rem;
+  }

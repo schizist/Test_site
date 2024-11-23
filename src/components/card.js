@@ -10,15 +10,18 @@ const Card = ({ title, description, thumbnail, onClick }) => (
         }}>{title}</h1>
       <button
         onClick={onClick}
-        
-        
       >
         <img
           src={thumbnail}
           alt={`${title} thumbnail`}
           
           style={{ 
-            borderRadius: 50 
+            borderRadius: 50,
+            width: '32rem',
+            height: '18rem',
+            margin: 0,
+            padding: 0,
+            
           }}
         />
       </button>

@@ -66,8 +66,8 @@
 
 .monogram {
   color: var(--color-text);
-  font-size: 4vw; /* Use vw units to make the text responsive to the viewport width */
+  /* font-size: 4vw; Use vw units to make the text responsive to the viewport width */
   font-weight: bold; 
   font-family: var(--font-orbitron);
+  text-decoration: none;
 }
-

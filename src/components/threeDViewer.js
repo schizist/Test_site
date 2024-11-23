@@ -75,8 +75,8 @@ const ThreeDViewer = ({ modelPath }) => {
   }, [modelPath]);
 
   return <div ref={mountRef} style={{ 
-    width: '60em', 
-    height: '30em', 
+    width: '64rem', 
+    height: '36rem', 
     margin: '0 auto', 
     // borderRadius: "1em 1em 1em 1em" 
   }} />;
