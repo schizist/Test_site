@@ -19,7 +19,7 @@ const models = [
   {
     title: 'Placeholder',
     description: 'A placeholder Cube.',
-    thumbnail: '/thumbnails/example.png',
+    thumbnail: '/thumbnails/example2.png',
     modelPath: '/models/example.glb',
   },
 ];
