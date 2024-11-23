@@ -30,11 +30,23 @@ const IndexPage = () => {
   return (
     <Layout>
      <div>
-        <h1>3D VIEWER</h1>
+        <h1 style={{
+          display: "flex",
+          justifyContent: "center",
+        }}>3D VIEWER</h1>
         <ThreeDViewer modelPath={selectedModel} />
       </div>
 
-      <div className="card-container">
+      <div 
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "1rem",
+        margin: "1rem",
+      }}
+      className="card-container">
         {models.map((model) => (
           <Card
             key={model.title}

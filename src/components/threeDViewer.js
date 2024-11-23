@@ -12,7 +12,7 @@ const ThreeDViewer = ({ modelPath }) => {
 
     // Set up the scene
     const scene = new THREE.Scene();
-    scene.background = null; // Set background color to distinguish it from black
+    scene.background = "black"; // Set background color to distinguish it from black
 
     // Set up the camera
     const camera = new THREE.PerspectiveCamera(75, currentMount.clientWidth / currentMount.clientHeight, 0.1, 1000);
@@ -74,7 +74,7 @@ const ThreeDViewer = ({ modelPath }) => {
     };
   }, [modelPath]);
 
-  return <div ref={mountRef} style={{ width: '100%', height: '500px', margin: '0 auto' }} />;
+  return <div ref={mountRef} style={{ width: '60em', height: '30em', margin: '0 auto', borderRadius: "1em 1em 1em 1em" }} />;
 };
 
 export default ThreeDViewer;
