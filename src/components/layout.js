@@ -1,8 +1,19 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-
+import * as styles from "../components/index.module.css"
 import Header from "./header"
 import "./layout.css"
+const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HOME`
+
+const moreLinks = [
+  { 
+    text: "Contact DCC", url: "https://gatsby.dev/discord" 
+  },
+  { 
+    text: "Github", url: "https://github.com/schizist" 
+  },
+ 
+]
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -57,6 +68,14 @@ const Layout = ({ children }) => {
               // backgroundColor: "red",
             }}
           >
+            <div className={styles.moreLinks}>
+            {moreLinks.map((link, i) => (
+              <React.Fragment key={link.url}>
+                <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+                {i !== moreLinks.length - 1 && <> · </> }
+              </React.Fragment>
+            ))}
+            </div>
             © {new Date().getFullYear()} &middot; DCC Illustration
           </footer>
         </div>
