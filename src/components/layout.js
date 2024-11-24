@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         <div        
           style={{
             position: "relative",
-            height: "100%",
+            // height: "100%",
             zIndex: 2,
             width: "100%",
             marginLeft: "var(--size-gutter)",
