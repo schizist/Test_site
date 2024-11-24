@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           position: 'relative',
-          minHeight: '105vh',
+          minHeight: '100vh',
           backgroundImage: 'url(/bg2.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center-top',
@@ -54,7 +54,7 @@ const Layout = ({ children }) => {
               marginTop: "var(--space-5)",
               fontSize: "var(--font-sm)",
               // color: "var(--color-text)",
-              backgroundColor: "red",
+              // backgroundColor: "red",
             }}
           >
             © {new Date().getFullYear()} &middot; DCC Illustration

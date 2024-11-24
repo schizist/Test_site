@@ -129,4 +129,9 @@ header::before {
 footer {
   position: relative;
   border-radius: 4rem 4rem 0rem 0rem;
+  height: 6rem;
+  z-index: -1;
+  background-color: black;
+  opacity: 50%;
+  margin-bottom: 0;
 }
