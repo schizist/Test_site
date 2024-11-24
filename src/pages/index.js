@@ -32,7 +32,6 @@ const links = [
   },
 ]
 
-
 const moreLinks = [
   { 
     text: "Contact DCC", url: "https://gatsby.dev/discord" 
@@ -47,21 +46,11 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HO
 
 const IndexPage = () => (
   <Layout>
-    <div style={{ position: "relative",
-          minHeight: "100vh",
-          borderRadius: "1em 1em 1em 1em", // Rounded corners on the bottom
-          backgroundColor: "rgba(0, 0, 0, 0.6)", // Semi-transparent black
-          // backgroundColor: "red",
-          backgroundSize: "cover",
-          backgroundPosition: "center top",
-          backgroundRepeat: "no-repeat",
-          display: "flex",
-          flexDirection: "column",
-          padding: "var(--size-gutter)",
+    <div 
+    style={{ 
           }}>
       <div className={styles.textCenter}>
         <StaticImage
-
           loading="Loadign"
           width={64}
           quality={95}
@@ -69,15 +58,6 @@ const IndexPage = () => (
           alt=""
           style={{ marginBottom: `var(--space-3)` }}
         />
-        
-      </div>
-
-      <div>
-      <p  className={styles.general}>
-        TO DO: 
-        <br/>
-        link indeed, linkedin,  make splash screen, 
-      </p>
       </div>
 
       <ul className={styles.list}>

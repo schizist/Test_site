@@ -23,7 +23,7 @@
   --space-5: 32px;
   --space-6: 64px;
   --size-content: 54rem;
-  --size-gutter: var(--space-6);
+  --size-gutter: 5rem;
   --size-gap: var(--space-6);
 
 }
@@ -75,38 +75,23 @@ dfn {
 }
 h1 {
   margin: 0;
-  margin-bottom: 3rem;
-  padding: 0;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01rem;
   line-height: var(--line-height-dense);
-  letter-spacing: -0.01em;
   color: var(--color-primary);
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
-h1 > b {
-  color: var(--color-primary);
-}
+
 img {
+  border-radius: 5rem;
   border-style: none;
   max-width: 100%;
-}
-code,
-kbd,
-pre,
-samp {
-  font-family: var(--font-orbitron);
-  font-size: 1em;
-  line-height: inherit;
-}
-hr {
-  box-sizing: content-box;
-  overflow: visible;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
+  width: 32rem;
+  height: 18rem;
+  margin: 0;
   padding: 0;
-  margin-bottom: calc(var(--space-4) - 1px);
-  background: hsla(0, 0%, 0%, 0.2);
-  border: none;
-  height: 1px;
 }
 * {
   box-sizing: inherit;
@@ -136,19 +121,6 @@ ol {
   list-style-position: outside;
   list-style-image: none;
 }
-pre {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: var(--space-4);
-  font-size: 0.875rem;
-  line-height: var(--line-height-normal);
-  background: hsla(0, 0%, 0%, 0.04);
-  border-radius: var(--border-radius);
-  overflow: auto;
-  word-wrap: normal;
-  padding: var(--space-4);
-}
 b,
 strong,
 dt,
@@ -168,72 +140,4 @@ li > ul {
   margin-left: var(--space-4);
   margin-top: calc(var(--space-4) / 2);
 }
-blockquote *:last-child {
-  margin-bottom: 0;
-}
-li *:last-child {
-  margin-bottom: 0;
-}
-p *:last-child {
-  margin-bottom: 0;
-}
-li > p {
-  margin-bottom: calc(var(--space-4) / 2);
-}
-p {
-  max-width: 680px;
-}
-code {
-  font-size: 0.875rem;
-}
-kbd {
-  font-size: 0.875rem;
-}
-samp {
-  font-size: 0.875rem;
-}
-abbr {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-acronym {
-  border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
-  cursor: help;
-}
-tt,
-code {
-  background-color: var(--color-code-bg);
-  border-radius: var(--border-radius);
-  color: var(--color-code);
-  font-family: var(--font-orbitron);
-  padding-bottom: 0.25em;
-  padding-top: 0.25em;
-  word-break: normal;
-}
-pre code {
-  background: none;
-}
-code:before,
-code:after,
-tt:before,
-tt:after {
-  content: "\00a0";
-  letter-spacing: -0.2em;
-}
-pre code:before,
-pre code:after,
-pre tt:before,
-pre tt:after {
-  content: none;
-}
 
-header {
-  align-items: center;
-  display: flex;
-  padding: 0 1rem;
-  border-radius: 1rem;
-  position: relative;
-  height: 6rem;
-  background-color: black;
-  opacity: 50%;
-}

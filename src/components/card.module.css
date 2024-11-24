@@ -4,12 +4,13 @@
     font-family: var(--font-orbitron);
   }
   button {
-    background: transparent; 
-    background-size: auto;
-    border: none; 
-  }
-
-  span {
-    font-family: var(--font-orbitron);
-    font-size: 5.5rem;
+    /* background: transparent;  */
+    /* background-size: auto; */
+    border-radius: 5rem;
+    width: 33rem;
+    height: 19rem;
+    margin: 0;
+    padding-top: 0.25rem;
+    background-color: black;
+    border-color: black;
   }

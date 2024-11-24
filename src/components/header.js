@@ -5,9 +5,7 @@ import * as styles from "../components/index.module.css";
 const Header = ({ siteTitle }) => (
   <header>
     <Link to="/"
-          style={{textDecoration: 'none'
-
-          }}>
+          style={{textDecoration: 'none',}}>
 
       {/* <img 
         src={require("../../src/images/dumbLogo.png").default}
@@ -18,7 +16,7 @@ const Header = ({ siteTitle }) => (
       />   */}
 
       <span className={styles.monogram} >
-        DC<b style={{ color: 'var(--color-primary)' }}>C</b>
+        DC<b style={{ color: 'var(--color-primary)',}}>C</b>
       </span>
     </Link>
   </header>

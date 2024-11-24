@@ -19,7 +19,7 @@ const models = [
   {
     title: 'Placeholder',
     description: 'A placeholder Cube.',
-    thumbnail: '/thumbnails/example2.png',
+    thumbnail: '/thumbnails/example.png',
     modelPath: '/models/example.glb',
   },
 ];
@@ -30,10 +30,7 @@ const IndexPage = () => {
   return (
     <Layout>
      <div>
-        <h1 style={{
-          display: "flex",
-          justifyContent: "center",
-        }}>3D VIEWER</h1>
+        <h1>3D VIEWER</h1>
         <ThreeDViewer modelPath={selectedModel} />
       </div>
 
@@ -47,6 +44,7 @@ const IndexPage = () => {
         margin: "1rem",
       }}
       className="card-container">
+        
         {models.map((model) => (
           <Card
             key={model.title}
