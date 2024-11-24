@@ -45,7 +45,11 @@ body {
   font-size: 1.6rem;
   margin: 0;
   word-wrap: break-word;
+  background-color: black; /* Ensure background matches your layout */
+  overflow-x: hidden; /* Prevent any horizontal overflow */
+  overflow-y: hidden;
 }
+
 a {
   background-color: transparent;
   color: var(--color-primary);

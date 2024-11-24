@@ -21,11 +21,12 @@ const Layout = ({ children }) => {
       <div
         style={{
           position: 'relative',
-          minHeight: '100vh',
+          minHeight: '105vh',
           backgroundImage: 'url(/bg2.png)',
           backgroundSize: 'cover',
           backgroundPosition: 'center-top',
           backgroundRepeat: 'no-repeat',
+          backgroundAttachment: 'fixed',
           display: 'flex',
           flexDirection: 'row',  
        }}
@@ -53,6 +54,7 @@ const Layout = ({ children }) => {
               marginTop: "var(--space-5)",
               fontSize: "var(--font-sm)",
               // color: "var(--color-text)",
+              backgroundColor: "red",
             }}
           >
             © {new Date().getFullYear()} &middot; DCC Illustration
