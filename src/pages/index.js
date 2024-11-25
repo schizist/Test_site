@@ -1,10 +1,9 @@
-import * as React from "react"
-// import { Link } from "gatsby"
+import * as styles from "../components/index.module.css"
 import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import * as styles from "../components/index.module.css"
+import * as React from "react"
+
 const links = [
   {
     text: "threeD",
@@ -32,15 +31,11 @@ const links = [
   },
 ]
 
-
-
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HOME`
 
 const IndexPage = () => (
   <Layout>
-    <div 
-    style={{ 
-          }}>
+    <div>
       <div className={styles.textCenter}>
         <StaticImage
           loading="Loadign"
@@ -51,13 +46,11 @@ const IndexPage = () => (
           style={{ marginBottom: `var(--space-3)` }}
         />
       </div>
-
       <ul className={styles.list}>
         {links.map(link => (
           <li key={link.url} className={styles.listItem}>
-            <a
-              className={styles.listItemLink}
-              href={`${link.url}${utmParameters}`}
+            <a  className={styles.listItemLink}
+                href={`${link.url}${utmParameters}`}
             >
               {link.text}
             </a>
@@ -65,8 +58,6 @@ const IndexPage = () => (
           </li>
         ))}
       </ul>
-      
-
    </div>
   </Layout>
 )
@@ -77,5 +68,4 @@ const IndexPage = () => (
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
 export const Head = () => <Seo title="Home" />
-
 export default IndexPage

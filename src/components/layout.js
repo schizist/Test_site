@@ -1,6 +1,6 @@
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import * as styles from "../components/index.module.css"
+import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react"
 import Header from "./header"
 import "./layout.css"
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HOME`
@@ -42,7 +42,6 @@ const Layout = ({ children }) => {
           flexDirection: 'row',  
        }}
       >
-
         {/* Content container */}
         <div        
           style={{
@@ -56,15 +55,10 @@ const Layout = ({ children }) => {
         >
           <Header siteTitle={data.site.siteMetadata?.title || "Title"} />
           <div style={{ marginBottom: "var(--space-5)" }}></div>
-
           <main>{children}</main>
-
           <footer
             style={{
-              textAlign: "center",
-              marginTop: "var(--space-5)",
               fontSize: "var(--font-sm)",
-              // color: "var(--color-text)",
               // backgroundColor: "red",
             }}
           >
@@ -76,7 +70,14 @@ const Layout = ({ children }) => {
               </React.Fragment>
             ))}
             </div>
+            <div     style={{
+              position: "absolute", // Allows precise positioning
+              left: "50%", // Moves the element to the midpoint of the footer
+              transform: "translateX(-50%)", // Centers the element horizontally
+              top: "calc(100% + 0.5rem)", // Optional: Adjust vertical spacing if needed
+              }}>
             © {new Date().getFullYear()} &middot; DCC Illustration
+            </div>
           </footer>
         </div>
       </div>
