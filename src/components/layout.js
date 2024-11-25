@@ -7,10 +7,12 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=HO
 
 const moreLinks = [
   { 
-    text: "Contact DCC", url: "https://gatsby.dev/discord" 
+    text: "Contact DCC", 
+    url: "https://gatsby.dev/discord" 
   },
   { 
-    text: "Github", url: "https://github.com/schizist" 
+    text: "Github", 
+    url: "https://github.com/schizist" 
   },
  
 ]
@@ -24,61 +26,75 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
-      {/* Background container with image and overlay */}
+      {/* Outer container */}
       <div
-        style={{
-          position: 'relative',
-          minHeight: '100vh',
-          backgroundImage: 'url(/bg2.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center-top',
-          backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed',
-          display: 'flex',
-          flexDirection: 'row',  
-       }}
+         style={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+         }}
       >
-        {/* Content container */}
-        <div        
+        {/* Background container */}
+        <div
           style={{
             position: "relative",
-            // height: "100%",
-            zIndex: 2,
-            width: "100%",
-            marginLeft: "var(--size-gutter)",
-            marginRight: "var(--size-gutter)",
-          }}
+            flexGrow: 1, // Pushes footer down when content is short
+            minHeight: "100vh",
+            backgroundImage: "url(/bg2.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center-top",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            display: "flex",
+            flexDirection: "row",
+        }}
         >
-          <Header siteTitle={data.site.siteMetadata?.title || "Title"} />
-          <div style={{ marginBottom: "var(--space-5)" }}></div>
-          <main>{children}</main>
-          <footer
+          {/* Content container */}
+          <div        
             style={{
-              fontSize: "var(--font-sm)",
-              // backgroundColor: "red",
+              position: "relative",
+              // height: "100%",
+              zIndex: 2,
+              width: "100%",
+              marginLeft: "var(--size-gutter)",
+              marginRight: "var(--size-gutter)",
             }}
           >
-            <div className={styles.moreLinks}>
-            {moreLinks.map((link, i) => (
-              <React.Fragment key={link.url}>
-                <a href={`${link.url}${utmParameters}`}>{link.text}</a>
-                {i !== moreLinks.length - 1 && <> · </> }
-              </React.Fragment>
-            ))}
-            </div>
-            <div     style={{
-              position: "absolute", // Allows precise positioning
-              left: "50%", // Moves the element to the midpoint of the footer
-              transform: "translateX(-50%)", // Centers the element horizontally
-              top: "calc(100% + 0.5rem)", // Optional: Adjust vertical spacing if needed
-              }}>
-            © {new Date().getFullYear()} &middot; DCC Illustration
-            </div>
-          </footer>
+            <Header siteTitle={data.site.siteMetadata?.title || "Title"} />
+
+          {/* Main content */} 
+            <div style={{ marginBottom: "var(--space-5)" }}></div>
+            <main>{children}</main>
+
+          {/* Footer */} 
+            <footer
+              style={{
+                fontSize: "var(--font-sm)",
+                // backgroundColor: "red",
+              }}
+            >
+              <div className={styles.moreLinks}>
+              {moreLinks.map((link, i) => (
+                <React.Fragment key={link.url}>
+                  <a href={`${link.url}${utmParameters}`}>{link.text}</a>
+                  {i !== moreLinks.length - 1 && <> · </> }
+                </React.Fragment>
+              ))}
+              </div>
+              <div  style={{
+                position: "absolute",
+                left: "50%",
+                transform: "translateX(-50%)",
+                top: "calc(100% + 0.5rem)",
+                }}>
+              © {new Date().getFullYear()} &middot; DCC Illustration
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     </>
