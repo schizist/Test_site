@@ -86,6 +86,7 @@ const Layout = ({ children }) => {
               ))}
               </div>
               <div  style={{
+                paddingTop: "1rem",
                 textAlign: "center",
                 // backgroundColor: "green",
                 }}>
