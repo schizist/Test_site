@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
           style={{
             position: "relative",
             flexGrow: 1,
-            // minHeight: "100vh", // body container
+            minHeight: "100vh", // body container
             backgroundImage: "url(/bg2.png)",
             backgroundSize: "cover",
             backgroundPosition: "center-top",
@@ -75,13 +75,9 @@ const Layout = ({ children }) => {
             <div style={{ marginBottom: "var(--space-5)" }}></div>
 
           {/* Footer */} 
-            <footer
-              style={{
-                fontSize: "var(--font-sm)",
-                // backgroundColor: "red",
-              }}
-            >
-              <div className={styles.moreLinks}>
+            <footer>
+              <div
+              className={styles.moreLinks}>
               {moreLinks.map((link, i) => (
                 <React.Fragment key={link.url}>
                   <a href={`${link.url}${utmParameters}`}>{link.text}</a>
@@ -90,12 +86,10 @@ const Layout = ({ children }) => {
               ))}
               </div>
               <div  style={{
-                position: "absolute",
-                left: "50%",
-                transform: "translateX(-50%)",
-                top: "calc(100% + 0.5rem)",
+                textAlign: "center",
+                // backgroundColor: "green",
                 }}>
-              © {new Date().getFullYear()} &middot; DCC Illustration
+                  © {new Date().getFullYear()} &middot; DCC Illustration
               </div>
             </footer>
           </div>
