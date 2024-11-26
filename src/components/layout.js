@@ -35,15 +35,15 @@ const Layout = ({ children }) => {
          style={{
           display: "flex",
           flexDirection: "column",
-          minHeight: "100vh",
+          // minHeight: "100vh",
          }}
       >
         {/* Background container */}
         <div
           style={{
             position: "relative",
-            flexGrow: 1, // Pushes footer down when content is short
-            minHeight: "100vh",
+            flexGrow: 1,
+            // minHeight: "100vh", // body container
             backgroundImage: "url(/bg2.png)",
             backgroundSize: "cover",
             backgroundPosition: "center-top",
@@ -64,9 +64,7 @@ const Layout = ({ children }) => {
               marginRight: "var(--size-gutter)",
               display: "flex",
               flexDirection: "column",
-              minHeight: "100vh",
-
-              
+              // minHeight: "100vh",
             }}
           >
             <Header siteTitle={data.site.siteMetadata?.title || "Title"} />
@@ -74,6 +72,7 @@ const Layout = ({ children }) => {
           {/* Main content */} 
             <div style={{ marginBottom: "var(--space-5)" }}></div>
             <main>{children}</main>
+            <div style={{ marginBottom: "var(--space-5)" }}></div>
 
           {/* Footer */} 
             <footer
