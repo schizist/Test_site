@@ -62,6 +62,11 @@ const Layout = ({ children }) => {
               width: "100%",
               marginLeft: "var(--size-gutter)",
               marginRight: "var(--size-gutter)",
+              display: "flex",
+              flexDirection: "column",
+              minHeight: "100vh",
+
+              
             }}
           >
             <Header siteTitle={data.site.siteMetadata?.title || "Title"} />

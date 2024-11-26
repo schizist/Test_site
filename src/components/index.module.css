@@ -95,6 +95,8 @@
 
 main {
   position: relative;
+  flex-grow: 1;
+  margin-bottom: 3rem;
 }
 
 main::before {
@@ -103,7 +105,7 @@ main::before {
   width: 100%;
   height: 100%;
   border-radius: 4rem 4rem 4rem 4rem;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   background-color: black;
   opacity: 50%;
@@ -112,6 +114,7 @@ main::before {
 
 header {
   position: relative;
+  
 }
 
 header::before {
@@ -128,6 +131,7 @@ header::before {
 
 footer {
   position: relative;
+  /* margin-top: 6rem; */
 }
 
 footer::before{
