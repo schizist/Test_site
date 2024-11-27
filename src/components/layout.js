@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
       <div
          style={{
           display: "flex",
-          flexDirection: "column",
+          // flexDirection: "column",
           // minHeight: "100vh",
          }}
       >
@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
           style={{
             position: "relative",
             flexGrow: 1,
-            minHeight: "100vh", // body container
+            // minHeight: "100vh", // body container
             backgroundImage: "url(/bg2.png)",
             backgroundSize: "cover",
             backgroundPosition: "center-top",

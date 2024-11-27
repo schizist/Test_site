@@ -1,3 +1,4 @@
+import * as styles from "../components/index.module.css"
 import React, { useState } from 'react';
 import Layout from '../components/layout.js';
 import ThreeDViewer from '../components/threeDViewer.js';
@@ -34,17 +35,7 @@ const IndexPage = () => {
         <ThreeDViewer modelPath={selectedModel} />
       </div>
 
-      <div 
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
-        alignItems: "center",
-        gap: "1rem",
-        margin: "1rem",
-      }}
-      className="card-container">
-        
+      <div className={styles.thumbnailContainer}>
         {models.map((model) => (
           <Card
             key={model.title}

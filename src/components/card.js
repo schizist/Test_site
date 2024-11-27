@@ -17,6 +17,4 @@ const Card = ({ title, description, thumbnail, onClick }) => (
     </div>
   </div>
 );
-
-
 export default Card;

@@ -12,7 +12,8 @@ const ThreeDViewer = ({ modelPath }) => {
 
     // Set up the scene
     const scene = new THREE.Scene();
-    scene.background = "black"; // Set background color to distinguish it from black
+    scene.background = null; // Set background color to distinguish it from black
+    // scene.background = new THREE.Color(0xffffff);
 
     // Set up the camera
     const camera = new THREE.PerspectiveCamera(75, currentMount.clientWidth / currentMount.clientHeight, 0.1, 1000);
