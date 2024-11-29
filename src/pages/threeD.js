@@ -36,6 +36,7 @@ const IndexPage = () => {
       </div>
 
       <div className={styles.thumbnailContainer}>
+        <div className={styles.thumbnailItem}>
         {models.map((model) => (
           <Card
             key={model.title}
@@ -46,6 +47,7 @@ const IndexPage = () => {
           />
         ))}
       </div>
+    </div>
     </Layout>
   );
 };
