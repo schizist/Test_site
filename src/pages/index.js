@@ -18,8 +18,8 @@ const links = [
       "A collection of my AutoCAD wor",
   },
   {
-    text: "Blender",
-    url: "https://www.gatsbyjs.com/plugins",
+    text: "threeDnew",
+    url: "threeDnew",
     description:
       "Learn how to add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
   },

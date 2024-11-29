@@ -49,6 +49,23 @@ body {
   overflow-x: hidden; /* Prevent any horizontal overflow */
   overflow-y: hidden;
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* To prevent any unwanted scrolling */
+}
+
+#root {
+  flex-grow: 1; /* Allow the root element to take the full remaining height */
+}
 
 a {
   background-color: transparent;

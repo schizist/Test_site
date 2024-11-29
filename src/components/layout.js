@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
          style={{
           display: "flex",
           // flexDirection: "column",
-          // minHeight: "100vh",
+          minHeight: "100vh",
          }}
       >
         {/* Background container */}
