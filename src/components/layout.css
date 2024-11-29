@@ -48,6 +48,9 @@ body {
   background-color: black; /* Ensure background matches your layout */
   overflow-x: hidden; /* Prevent any horizontal overflow */
   overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* To prevent any unwanted scrolling */
 }
 html, body {
   height: 100%;
@@ -57,11 +60,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden; /* To prevent any unwanted scrolling */
-}
 
 #root {
   flex-grow: 1; /* Allow the root element to take the full remaining height */
@@ -162,3 +160,25 @@ li > ul {
   margin-top: calc(var(--space-4) / 2);
 }
 
+/* layout.css */
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .layout {
+    padding: 1rem;
+    min-height: 100vh; /* Ensure full height */
+  }
+
+  .main-content {
+    padding: 2rem;
+    justify-content: flex-start;
+  }
+
+  .thumbnail-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Better fit for smaller screens */
+    gap: 1rem;
+  }
+}

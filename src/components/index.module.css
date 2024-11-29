@@ -173,3 +173,30 @@ footer {
 .keen-slider__slide:hover {
   transform: scale(1.05);
 }
+
+/* index.module.css */
+
+@media (max-width: 768px) {
+  .list {
+    --w: 200px; /* Reduce the width of list items for smaller screens */
+    --n: 1; /* Adjust number of columns */
+    grid-template-columns: repeat(auto-fit, minmax(var(--w), 1fr));
+    gap: 1rem; /* Reduce gap for better fit */
+    padding: 1rem;
+  }
+
+  .container {
+    flex-direction: column; /* Stack elements vertically on mobile */
+    padding: 1rem;
+    margin: 0.5rem; /* Minimize margins to save space */
+  }
+  
+  header, footer {
+    border-radius: 2rem; /* Reduce border radius for mobile */
+  }
+
+  .keen-slider {
+    width: 100%; /* Ensure the slider takes full width on mobile */
+    max-width: 100%;
+  }
+}
