@@ -65,10 +65,13 @@
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
-  margin: 1rem;
+  /* margin: 1rem; */
   background-color: black;
   opacity: 50%;
-}
+  flex-direction: column;
+  padding: 1rem;
+  margin: 0.5rem;
+  }
 
 .monogram {
   color: var(--color-text);
@@ -118,7 +121,7 @@ main {
   /* width: 100%; */
   border-radius: 4rem 4rem 4rem 4rem;
   /* flex-direction: column; */
-  background-color: rgba(249, 10, 10, 0.5);
+  background-color: rgba(255, 0, 0, 0.5);
 }
 
 header {
@@ -159,10 +162,17 @@ footer {
 } */
 
 .keen-slider {
-  width: 90%;
-  max-width: 1200px;
+  /* width: 90%;
+  max-width: 1200px; */
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
+/* .keen-slider {
+  width: 100%;
+  max-width: 100%;
+} */
+
 
 .keen-slider__slide {
   cursor: pointer;
@@ -185,18 +195,11 @@ footer {
     padding: 1rem;
   }
 
-  .container {
-    flex-direction: column; /* Stack elements vertically on mobile */
-    padding: 1rem;
-    margin: 0.5rem; /* Minimize margins to save space */
-  }
+
   
   header, footer {
     border-radius: 2rem; /* Reduce border radius for mobile */
   }
 
-  .keen-slider {
-    width: 100%; /* Ensure the slider takes full width on mobile */
-    max-width: 100%;
-  }
+
 }

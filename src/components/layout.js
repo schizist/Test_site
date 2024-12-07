@@ -34,7 +34,8 @@ const Layout = ({ children }) => {
       <div
          style={{
           display: "flex",
-          // flexDirection: "column",
+          flexDirection: "column",
+          flexWrap: "wrap",
           minHeight: "100vh",
          }}
       >
@@ -51,17 +52,18 @@ const Layout = ({ children }) => {
             backgroundAttachment: "fixed",
             display: "flex",
             flexDirection: "row",
+            paddingLeft: "3rem",
+            paddingRight: "3rem",
         }}
         >
           {/* Content container */}
           <div        
             style={{
               position: "relative",
-              // height: "100%",
               zIndex: 2,
               width: "100%",
-              marginLeft: "var(--size-gutter)",
-              marginRight: "var(--size-gutter)",
+              margin: "0 auto",
+              // maxWidth: "1200px",
               display: "flex",
               flexDirection: "column",
               // minHeight: "100vh",
